@@ -11,6 +11,7 @@ import { environment } from '../environments/environment.prod';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 // for debugging
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return function(state, action) {
@@ -23,6 +24,7 @@ export const metaReducers: MetaReducer<any>[] = [debug];
 @NgModule({
   declarations: [
     AppComponent,
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,
