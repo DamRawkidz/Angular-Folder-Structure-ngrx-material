@@ -60,7 +60,7 @@ export class BaseService {
         return this.http.get<T[]>(this.fullUrl)
     }
 
-    add<T>(data: T) : Observable<T> {
+    add<T>(data: T): Observable<T> {
         return this.http.post<T>(this.fullUrl,data)
     }
 
@@ -68,11 +68,11 @@ export class BaseService {
         return this.http.get<T>(`${this.fullUrl}/${id}`)
     }
 
-    update<T>(id: number,data: T) :Observable<Response>{
+    update<T>(id: number,data: T): Observable<Response>{
         return this.http.put<Response>(`${this.fullUrl}/${id}`,data)
     }
 
-    deleteDate(id: number) :Observable<Response> {
+    deleteData(id: number): Observable<Response> {
         return this.http.delete<Response>(`${this.fullUrl}/${id}`)
     }
 
